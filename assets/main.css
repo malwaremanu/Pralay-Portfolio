@@ -9,3 +9,4 @@ input {
 button {
     @apply flex items-center gap-2 px-4 py-2 border rounded-md hover:bg-gray-900 hover:text-white hover:shadow-xl cursor-pointer;
 }
+
