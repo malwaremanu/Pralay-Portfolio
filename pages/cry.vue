@@ -61,19 +61,16 @@ export default {
     }
   },
   methods: {
-    enc(x) {
-      // Encrypt      
+    enc(x) {     
       var encrypted = CryptoJS.AES.encrypt(JSON.stringify(x), this.secret, {
         mode: CryptoJS.mode.ECB,
       })
-      encrypted = encrypted.toString()
-      console.log(encrypted)
+      encrypted = encrypted.toString()      
       this.txt.data = encrypted
       return encrypted
     },
-
+    
     dec(x) {
-      // Decrypt
       var decrypted = CryptoJS.AES.decrypt(x, this.secret, {
         mode: CryptoJS.mode.ECB,
       })
